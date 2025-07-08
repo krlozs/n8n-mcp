@@ -67,11 +67,11 @@ USER nodejs
 ENV IS_DOCKER=true
 
 # Expose HTTP port
-EXPOSE 3000
+EXPOSE 3100
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-  CMD curl -f http://127.0.0.1:3000/health || exit 1
+  CMD curl -f http://127.0.0.1:3100/health || exit 1
 
 # Optimized entrypoint
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
